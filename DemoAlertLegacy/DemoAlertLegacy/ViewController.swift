@@ -7,24 +7,24 @@
 //
 
 import UIKit
-import UIAlertControllerShowLegacy
 
 class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-		let alert: UIAlertController = UIAlertController(title:"Test title", message: "Test message", preferredStyle: .alert)
-		let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-		alert.addAction(okAction)
-		alert.show()
+		// Swift
+		let foo: FooService = FooService()
+		foo.fooRequest()
+		
+		//Objective-C
+		let bar: BarService = BarService()
+		bar.barRequest()
+		
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-
 }
 

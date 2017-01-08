@@ -16,6 +16,8 @@
 		E02E02011E2153970089B91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02E01FF1E2153970089B91B /* LaunchScreen.storyboard */; };
 		E02E020C1E2153970089B91B /* DemoAlertLegacyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E020B1E2153970089B91B /* DemoAlertLegacyTests.swift */; };
 		E02E02171E2153980089B91B /* DemoAlertLegacyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E02161E2153980089B91B /* DemoAlertLegacyUITests.swift */; };
+		E02E02531E22D1840089B91B /* FooService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E02521E22D1840089B91B /* FooService.swift */; };
+		E02E02571E22D50F0089B91B /* BarService.m in Sources */ = {isa = PBXBuildFile; fileRef = E02E02561E22D50F0089B91B /* BarService.m */; };
 		F6C5617B40C2F6BE49F03CCF /* Pods_DemoAlertLegacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F554EACC8D362A754F0B8B /* Pods_DemoAlertLegacy.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,10 @@
 		E02E02121E2153980089B91B /* DemoAlertLegacyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAlertLegacyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02E02161E2153980089B91B /* DemoAlertLegacyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAlertLegacyUITests.swift; sourceTree = "<group>"; };
 		E02E02181E2153980089B91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E02E02521E22D1840089B91B /* FooService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooService.swift; sourceTree = "<group>"; };
+		E02E02541E22D50F0089B91B /* DemoAlertLegacy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoAlertLegacy-Bridging-Header.h"; sourceTree = "<group>"; };
+		E02E02551E22D50F0089B91B /* BarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarService.h; sourceTree = "<group>"; };
+		E02E02561E22D50F0089B91B /* BarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarService.m; sourceTree = "<group>"; };
 		E1BAC558501D12394BEED759 /* Pods-DemoAlertLegacyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAlertLegacyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoAlertLegacyUITests/Pods-DemoAlertLegacyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F4B53FFF1584B4B38E33A5C3 /* Pods-DemoAlertLegacy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAlertLegacy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoAlertLegacy/Pods-DemoAlertLegacy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,10 +145,14 @@
 			children = (
 				E02E01F61E2153970089B91B /* AppDelegate.swift */,
 				E02E01F81E2153970089B91B /* ViewController.swift */,
+				E02E02521E22D1840089B91B /* FooService.swift */,
+				E02E02551E22D50F0089B91B /* BarService.h */,
+				E02E02561E22D50F0089B91B /* BarService.m */,
 				E02E01FA1E2153970089B91B /* Main.storyboard */,
 				E02E01FD1E2153970089B91B /* Assets.xcassets */,
 				E02E01FF1E2153970089B91B /* LaunchScreen.storyboard */,
 				E02E02021E2153970089B91B /* Info.plist */,
+				E02E02541E22D50F0089B91B /* DemoAlertLegacy-Bridging-Header.h */,
 			);
 			path = DemoAlertLegacy;
 			sourceTree = "<group>";
@@ -242,6 +252,7 @@
 				TargetAttributes = {
 					E02E01F21E2153970089B91B = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					E02E02061E2153970089B91B = {
@@ -446,6 +457,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02E02531E22D1840089B91B /* FooService.swift in Sources */,
+				E02E02571E22D50F0089B91B /* BarService.m in Sources */,
 				E02E01F91E2153970089B91B /* ViewController.swift in Sources */,
 				E02E01F71E2153970089B91B /* AppDelegate.swift in Sources */,
 			);
@@ -599,11 +612,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F4B53FFF1584B4B38E33A5C3 /* Pods-DemoAlertLegacy.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DemoAlertLegacy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rovenskyy.DemoAlertLegacy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoAlertLegacy/DemoAlertLegacy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -612,11 +629,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 791A3C00A46F30259460BFBC /* Pods-DemoAlertLegacy.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DemoAlertLegacy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rovenskyy.DemoAlertLegacy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoAlertLegacy/DemoAlertLegacy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -698,6 +718,7 @@
 				E02E021D1E2153980089B91B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E02E021E1E2153980089B91B /* Build configuration list for PBXNativeTarget "DemoAlertLegacyTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +727,7 @@
 				E02E02201E2153980089B91B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E02E02211E2153980089B91B /* Build configuration list for PBXNativeTarget "DemoAlertLegacyUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +736,7 @@
 				E02E02231E2153980089B91B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

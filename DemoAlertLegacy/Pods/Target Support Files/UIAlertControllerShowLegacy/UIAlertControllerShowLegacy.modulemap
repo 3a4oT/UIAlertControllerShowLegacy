@@ -1,0 +1,6 @@
+framework module UIAlertControllerShowLegacy {
+  umbrella header "UIAlertControllerShowLegacy-umbrella.h"
+
+  export *
+  module * { export * }
+}
