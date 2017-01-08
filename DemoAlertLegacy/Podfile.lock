@@ -1,0 +1,16 @@
+PODS:
+  - UIAlertControllerShowLegacy (0.1.0)
+
+DEPENDENCIES:
+  - UIAlertControllerShowLegacy (from `~/XcodeProjects/UIAlertControllerShowLegacy`)
+
+EXTERNAL SOURCES:
+  UIAlertControllerShowLegacy:
+    :path: "~/XcodeProjects/UIAlertControllerShowLegacy"
+
+SPEC CHECKSUMS:
+  UIAlertControllerShowLegacy: 3767ffaa510aad4460b5b3bd62ba28c67677cca5
+
+PODFILE CHECKSUM: 4251aa9e3862ba144ecc8061f83fa83c3ce33eaf
+
+COCOAPODS: 1.1.1
